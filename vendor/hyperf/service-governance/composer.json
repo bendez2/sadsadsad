@@ -1,0 +1,51 @@
+{
+    "name": "hyperf/service-governance",
+    "description": "A service governance component for Hyperf.",
+    "license": "MIT",
+    "keywords": [
+        "php",
+        "swoole",
+        "hyperf",
+        "service-governance"
+    ],
+    "homepage": "https://hyperf.io",
+    "support": {
+        "issues": "https://github.com/hyperf/hyperf/issues",
+        "source": "https://github.com/hyperf/hyperf",
+        "docs": "https://hyperf.wiki",
+        "pull-request": "https://github.com/hyperf/hyperf/pulls"
+    },
+    "require": {
+        "php": ">=8.1",
+        "hyperf/contract": "~3.1.0",
+        "hyperf/support": "~3.1.0",
+        "jetbrains/phpstorm-attributes": "^1.0"
+    },
+    "suggest": {
+        "hyperf/event": "Required to use RegisterServiceListener.",
+        "hyperf/framework": "Required to use RegisterServiceListener.",
+        "hyperf/service-governance-consul": "Required to use consul adapter.",
+        "hyperf/service-governance-nacos": "Required to use nacos adapter."
+    },
+    "autoload": {
+        "psr-4": {
+            "Hyperf\\ServiceGovernance\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "HyperfTest\\ServiceGovernance\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "3.1-dev"
+        },
+        "hyperf": {
+            "config": "Hyperf\\ServiceGovernance\\ConfigProvider"
+        }
+    }
+}

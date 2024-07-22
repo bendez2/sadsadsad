@@ -1,0 +1,21 @@
+services:
+
+  hyperf:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: php bin/hyperf.php server:watch
+    ports:
+      - 9501:9501
+    restart: always
+    logging:
+      options:
+        max-size: 1g
+    volumes:
+      - .:/data/project
+    networks:
+      - backend
+
+networks:
+  backend:
+    driver: bridge
